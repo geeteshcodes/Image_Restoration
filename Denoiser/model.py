@@ -1,6 +1,6 @@
 from .architecture import RCNN
 import tensorflow as tf
-WEIGHTS = "denoiser/denoiser_weights.h5"
+WEIGHTS = "Denoiser/denoiser_weights.h5"
 
 def load_model():
     model = RCNN()
@@ -9,3 +9,4 @@ def load_model():
     model(dummy)
     model.load_weights(WEIGHTS)
     return model
+
