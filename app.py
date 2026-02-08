@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 import tensorflow as tf
 
-from denoiser.model import load_model as load_denoiser
+from Denoiser.model import load_model as load_denoiser
 from Colour.colour_model import load_model as load_colorizer
 
 PATCH_SIZE = 128
@@ -107,3 +107,4 @@ if file:
 
     buf = cv2.imencode(".png", cv2.cvtColor((out * 255).astype(np.uint8), cv2.COLOR_RGB2BGR))[1]
     st.download_button("Download Result", buf.tobytes(), "result.png", "image/png")
+
